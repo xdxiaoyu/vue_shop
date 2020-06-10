@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: dxiaoxing
+ * @Date: 2020-06-10 08:44:01
+ * @LastEditors: dxiaoxing
+ * @LastEditTime: 2020-06-10 08:50:51
+--> 
 <template>
   <el-container class="home_container">
     <!-- 头部区域 -->
@@ -69,7 +77,7 @@ export default {
     background-color: white;
     transform: rotate(180deg);
   }
-  > div {
+  div {
     display: flex;
     align-items: center;
     span {
