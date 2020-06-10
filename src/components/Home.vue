@@ -4,7 +4,7 @@
  * @Author: dxiaoxing
  * @Date: 2020-06-10 08:44:01
  * @LastEditors: dxiaoxing
- * @LastEditTime: 2020-06-10 08:55:05
+ * @LastEditTime: 2020-06-10 09:00:46
 --> 
 <template>
   <el-container class="home_container">
@@ -42,7 +42,7 @@
         </el-menu>
       </el-aside>
       <!-- 右侧内容主体 -->
-      <el-main>多分支提交是否需要多次输入密码</el-main>
+      <el-main>单分支删除提交</el-main>
     </el-container>
   </el-container>
 </template>
