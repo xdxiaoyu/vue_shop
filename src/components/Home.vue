@@ -4,7 +4,7 @@
  * @Author: dxiaoxing
  * @Date: 2020-06-10 08:44:01
  * @LastEditors: dxiaoxing
- * @LastEditTime: 2020-06-10 09:00:46
+ * @LastEditTime: 2020-06-10 09:11:39
 --> 
 <template>
   <el-container class="home_container">
@@ -42,7 +42,7 @@
         </el-menu>
       </el-aside>
       <!-- 右侧内容主体 -->
-      <el-main>单分支删除提交</el-main>
+      <el-main>github使用ssh</el-main>
     </el-container>
   </el-container>
 </template>
