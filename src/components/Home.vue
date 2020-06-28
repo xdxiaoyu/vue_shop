@@ -52,8 +52,6 @@ export default {
     }
   },
   created () {
-    // 分支提交
-    console.log(111)
     this.getMenuList()
   },
   methods: {
