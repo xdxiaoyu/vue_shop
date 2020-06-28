@@ -13,21 +13,21 @@
       <!-- 测边栏 -->
       <el-aside width="200px">
         <!-- 侧边栏菜单区 -->
-        <el-menu background-color="#333744" text-color="#fff" active-text-color="#ffd04b">
+        <el-menu background-color="#333744" text-color="#fff" active-text-color="#409EFF ">
           <!-- 一级菜单 -->
-          <el-submenu index="1">
+          <el-submenu :index="item.id + ''" v-for="item in menulist" :key="item.id">
             <!-- 一级菜单模板区域 -->
             <template slot="title">
               <!-- 图标 -->
               <i class="el-icon-location"></i>
-              <span>导航一</span>
+              <span>{{item.authName}}</span>
             </template>
             <!-- 二级菜单 -->
-            <el-menu-item index="1-4-1">
+            <el-menu-item :index="suubItem.id + ''" v-for="suubItem in item.children" :key="suubItem.id">
               <template slot="title">
                 <!-- 图标 -->
                 <i class="el-icon-location"></i>
-                <span>导航一</span>
+                <span>{{suubItem.authName}}</span>
               </template>
             </el-menu-item>
           </el-submenu>
@@ -40,11 +40,25 @@
 </template>
 
 <script>
+import { menus } from '../api/login_api'
 export default {
+  data () {
+    return {
+      menulist: [] // 左侧菜单数据
+    }
+  },
+  created () {
+    this.getMenuList()
+  },
   methods: {
     logout () {
       window.sessionStorage.clear()
       this.$router.push('/login')
+    },
+    // 获取所有菜单
+    async getMenuList () {
+      const { data: res } = await menus()
+      this.menulist = res.data
     }
   }
 }
