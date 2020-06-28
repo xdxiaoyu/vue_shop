@@ -52,6 +52,7 @@ export default {
     }
   },
   created () {
+    // 检查提交记录
     this.getMenuList()
   },
   methods: {
