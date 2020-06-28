@@ -23,7 +23,11 @@
               <span>{{item.authName}}</span>
             </template>
             <!-- 二级菜单 -->
-            <el-menu-item :index="suubItem.id + ''" v-for="suubItem in item.children" :key="suubItem.id">
+            <el-menu-item
+              :index="suubItem.id + ''"
+              v-for="suubItem in item.children"
+              :key="suubItem.id"
+            >
               <template slot="title">
                 <!-- 图标 -->
                 <i class="el-icon-location"></i>
@@ -48,6 +52,8 @@ export default {
     }
   },
   created () {
+    // 分支提交
+    console.log(111)
     this.getMenuList()
   },
   methods: {
