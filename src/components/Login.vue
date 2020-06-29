@@ -38,8 +38,8 @@ export default {
   data () {
     return {
       loginForm: {
-        username: '', // 用户名
-        password: '' // 密码
+        username: 'admin', // 用户名
+        password: '123456' // 密码
       },
       // 这是表单的验证规则对象
       loginFormRules: {
